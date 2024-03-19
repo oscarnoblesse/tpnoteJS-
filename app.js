@@ -1,4 +1,4 @@
-import Perso from './vue/Personnage.js';
+import Perso from './vue/PersonnageFinal.js';
 import Utils from './Utils.js'
 
 
