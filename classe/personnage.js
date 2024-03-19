@@ -23,32 +23,26 @@ class Personnage {
         }
     }
 
-    afficherInfos() {
-        console.log(`Nom: ${this.nom}`);
-        console.log(`Vie: ${this.vie}`);
-        console.log(`Dégâts: ${this.degats}`);
-        console.log(`Compétences:`);
-        this.competences.forEach(comp => {
-            console.log(`- ${comp.description} (${comp.nature}) - Dégâts: ${comp.degats}`);
-        });
-        console.log(`Équipements: ${this.equipements.join(', ')}`);
-    }
 
     afficherInfos() {
         let html = `<div class="personnage">
                         <h2>${this.nom}</h2>
+                        <img src="${this.image}" alt="${this.nom}">
                         <ul>
                             <li><strong>Nom:</strong> ${this.nom}</li>
                             <li><strong>Vie:</strong> ${this.vie}</li>
                             <li><strong>Dégâts:</strong> ${this.degats}</li>
-                            <li><strong>Compétences:</strong>
-                                <ul>`;
-        this.competences.forEach(comp => {
-            html += `<li>${comp.description} (${comp.nature}) - Dégâts: ${comp.degats}</li>`;
-        });
-        html += `                   </ul>
+                            <li><h2>Compétences:</h2>`;
+                            this.competences.forEach(comp => {
+                                html += `<li>${comp.afficherInfosCompetences()}</li>`;
+                            });
+        html += `
                             </li>
-                            <li><strong>Équipements:</strong> ${this.equipements.join(', ')}</li>
+                            <li><h2>Équipements:</h2></li>`;
+                            this.equipements.forEach(equi => {
+                                html += `<li>${equi.afficherEquipement()}</li>`;
+                            });
+        html += `
                         </ul>
                     </div>`;
         document.write(html);
