@@ -1,14 +1,22 @@
 class Competence {
-    constructor(description, degats, nature) {
+    constructor(description, degats, nature,image) {
         this.description = description;
         this.degats = degats;
         this.nature = nature;
+        this.image = image;
     }
 
-    afficherInfos() {
-        console.log(`Description: ${this.description}`);
-        console.log(`Dégâts: ${this.degats}`);
-        console.log(`Nature: ${this.nature}`);
+    afficherInfosCompetences() {
+        let html = `<div class="competence">
+                        <h3>${this.description}</h3>
+                        <img src="${this.image}" alt="${this.description}">
+                        <ul>
+                            <li><strong>Description:</strong> ${this.description}</li>
+                            <li><strong>Dégâts:</strong> ${this.degats}</li>
+                            <li><strong>Nature:</strong> ${this.nature}</li>
+                        </ul>
+                    </div>`;
+        return html;
     }
 }
 
