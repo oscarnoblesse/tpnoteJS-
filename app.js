@@ -1,5 +1,5 @@
 import Perso from './vue/Personnage.js';
-
+import Utils from './Utils.js'
 
 
 // List of supported routes. Any url other than these routes will throw a 404 error
