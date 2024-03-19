@@ -22,7 +22,6 @@ class Personnage {
             console.log(`${this.nom} a été vaincu !`);
         }
     }
-
 }
 
     
