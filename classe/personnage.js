@@ -1,31 +1,34 @@
-class Personnage {
-    constructor(nom, vie, degats,image) {
-        this.nom = nom;
-        this.vie = vie;
-        this.degats = degats;
-        this.image = image;
-        this.competences = [];
-        this.equipements = [];
+export default class Personnage {
+    constructor(img, nom, description, armes, primordiaux) {
+        this._img = img;
+        this._nom = nom;
+        this._description = description;
+        this._armes = armes;
+        this._primordiaux = primordiaux;
     }
 
-    ajouterCompetence(competence) {
-        this.competences.push(competence);
+    // Getter pour l'image
+    get image() {
+        return this._img;
     }
 
-    ajouterEquipement(equipement) {
-        this.equipements.push(equipement);
+    // Getter pour le nom
+    get nom() {
+        return this._nom;
     }
 
-    recevoirDegats(degats) {
-        this.vie -= degats;
-        if (this.vie <= 0) {
-            console.log(`${this.nom} a été vaincu !`);
-        }
+    // Getter pour la description
+    get description() {
+        return this._description;
+    }
+
+    // Getter pour les armes
+    get armes() {
+        return this._armes;
+    }
+
+    // Getter pour les primordiaux
+    get primordiaux() {
+        return this._primordiaux;
     }
 }
-
-    
-
-
-
-
