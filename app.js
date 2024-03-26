@@ -1,10 +1,11 @@
-import Perso from './vue/PersonnageFinal.js';
+
+import Accueil from './vue/Accueil.js';
 import Utils from './Utils.js'
 
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
-    '/'                     : Perso
+    '/'                     : Accueil
 
 };
 
