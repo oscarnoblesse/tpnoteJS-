@@ -1,10 +1,10 @@
 export default class Personnage {
-    constructor(img, nom, description, equipement, primordiaux) {
+    constructor(id,img, nom, description, equipement, primordiaux) {
+        this._id = id;
         this._img = img;
         this._nom = nom;
         this._description = description;
         this._equipement = equipement;
-        console.log(this._equipement);
         this._primordiaux = primordiaux;
     }
 
@@ -31,5 +31,9 @@ export default class Personnage {
     // Getter pour les primordiaux
     get primordiaux() {
         return this._primordiaux;
+    }
+
+    get id(){
+        return this._id;
     }
 }

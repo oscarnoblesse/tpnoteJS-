@@ -3,7 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="./app.js"></script>
+    <script type="module" src="./app.js">
+    </script>
+    <script>
+        function liker(id){ 
+            let favoris = localStorage.getItem("favoris");
+            console.log(favoris);
+            if(favoris !== null){
+                if(favoris.includes(id)){
+                    console.log("Déliker le personnage avec l'id " + id);
+                    let favorissplit = favoris.split(",");
+                    console.log(favorissplit);
+                    favorissplit = favorissplit.filter(e => e !== id); // Utilisation de la méthode filter pour exclure l'ID déliké
+                    favoris = favorissplit.join(","); // Rejoindre la liste filtrée avec des virgules
+                    localStorage.setItem('favoris', favoris); // Enregistrer la liste filtrée dans le localStorage
+                }
+                else{
+                    console.log("Liker le personnage avec l'id " + id);
+                    favoris += "," + id; // Ajouter l'ID liké à la liste existante, séparé par une virgule
+                    localStorage.setItem('favoris', favoris); // Enregistrer la liste mise à jour dans le localStorage
+                }
+            }
+            else{
+                console.log("Création du localStorage et enregistrement de " + id);
+                localStorage.setItem('favoris', id); // Créer le localStorage avec l'ID si c'est la première fois
+            }
+        }
+    </script>
+    
     <title>Informations des Personnages</title>
     <style>
         body {

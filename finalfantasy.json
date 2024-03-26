@@ -32,37 +32,37 @@
     "competence":[
       {
         "id" :1,
-        "img" : "./image/imageCompetence/competenceGlobal.jpg",
+        "img" : "./image/imageCompetence/competenceGeneral.jpg",
         "nom": "Attaque",
         "description": "Attaque simple"
       },
       {
         "id" :2,
-        "img" : "./image/imageCompetence/competenceGlobal.jpg",
+        "img" : "./image/imageCompetence/competenceGeneral.jpg",
         "nom": "boule de feu",
         "description": "une petit boule de feu tres chaude"
       },
       {
         "id" :3,
-        "img" : "./image/imageCompetence/competenceGlobal.jpg",
+        "img" : "./image/imageCompetence/competenceGeneral.jpg",
         "nom": "épée de lumière",
         "description": "une épée qui brille de mille feux"
       },
       {
         "id" :4,
-        "img" : "./image/imageCompetence/competenceGlobal.jpg",
+        "img" : "./image/imageCompetence/competenceGeneral.jpg",
         "nom": "flèche de glace",
         "description": "une flèche qui gèle tout sur son passage"
       },
       {
         "id" :5,
-        "img" : "./image/imageCompetence/competenceGlobal.jpg",
+        "img" : "./image/imageCompetence/competenceGeneral.jpg",
         "nom": "lance du Dragoon",
         "description": "une lance qui perce tout"
       },
       {
         "id" :6,
-        "img" : "./image/imageCompetence/competenceGlobal.jpg",
+        "img" : "./image/imageCompetence/competenceGeneral.jpg",
         "nom": "éclair",
         "description": "un éclair qui frappe tout"
       }
@@ -71,62 +71,62 @@
     "equipement" :[
       {
         "id": 1,
-        "img" : "./image/imageEquipement/equipementGlobal.jpg",
+        "img" : "./image/imageEquipement/equipementglobal.jpg",
         "nom": "Armure de lumière",
         "description": "une armure qui brille de mille feux"
         
       },
       {
         "id": 2,
-        "img" : "./image/imageEquipement/equipementGlobal.jpg",
+        "img" : "./image/imageEquipement/equipementglobal.jpg",
         "nom": "Armure de glace",
         "description": "une armure qui gèle tout sur son passage"
         
       },
       {
         "id": 3,
-        "img" : "./image/imageEquipement/equipementGlobal.jpg",
+        "img" : "./image/imageEquipement/equipementglobal.jpg",
         "nom": "Armure du Dragoon",
         "description": "une armure qui perce tout"
        
       },
       {
         "id": 4,
-        "img" : "./image/imageEquipement/equipementGlobal.jpg",
+        "img" : "./image/imageEquipement/equipementglobal.jpg",
         "nom": "Bouclier de lumière",
         "description": "un bouclier qui brille de mille feux"
         
       },
       {
         "id": 5,
-        "img" : "./image/imageEquipement/equipementGlobal.jpg",
+        "img" : "./image/imageEquipement/equipementglobal.jpg",
         "nom": "Bouclier de glace",
         "description": "un bouclier qui gèle tout sur son passage"
         
       },
       {
         "id": 6,
-        "img" : "./image/imageEquipement/equipementGlobal.jpg",
+        "img" : "./image/imageEquipement/equipementglobal.jpg",
         "nom": "Bouclier du Dragoon",
         "description": "un bouclier qui perce tout"
         
       },
       {
         "id": 7,
-        "img" : "./image/imageEquipement/equipementGlobal.jpg",
+        "img" : "./image/imageEquipement/equipementglobal.jpg",
         "nom": "eppee de feu",
         "description": "un bouclier qui brûle tout"
         
       },
       {
         "id": 8,
-        "img" : "./image/imageEquipement/equipementGlobal.jpg",
+        "img" : "./image/imageEquipement/equipementglobal.jpg",
         "nom": "epee de foudre",
         "description": "un bouclier qui frappe tout"
       },
       {
         "id": 9,
-        "img" : "./image/imageEquipement/equipementGlobal.jpg",
+        "img" : "./image/imageEquipement/equipementglobal.jpg",
         "nom": "arc de glace",
         "description": "un bouclier qui gèle tout"
       }
