@@ -1,3 +1,5 @@
+import Competence from '../classe/competence.js';
+import Equipement from '../classe/equipement.js';
 import Personnage from '../classe/personnage.js';
 
 export default class PersonnageFinal {
@@ -6,8 +8,28 @@ export default class PersonnageFinal {
         const response = await fetch('http://localhost:3000/personnages');
         const personnages = await response.json();
         let personneAcreer = [];
+        let competenceAcreer = [];
+        let equipementAcreer = [];
+        personnages.forEach(equipement => {
+            equipementAcreer.push(new Equipement(equipement.id,equipement.img,equipement.nom,equipement.description))
+        });
+        personnages.forEach(competence => {
+            competenceAcreer.push(new Competence(competence.id,competence.img,competence.nom,competence.description))
+        });
         personnages.forEach(personnage => {
-        personneAcreer.push(new Personnage(personnage.img,personnage.nom,personnage.description,personnage.armes,personnage.primordiaux))
+            let equipementP = null;
+            let competenceP = null;
+            for (let i = 0; i < equipementAcreer.length; i++) {
+                if (equipementAcreer[i].id == personnage.equipement) {
+                    equipementP = equipementAcreer[i];
+                }
+            }
+            for (let i = 0; i < competenceAcreer.length; i++) {
+                if (competenceAcreer[i].id == personnage.primordiaux) {
+                    competenceP = competenceAcreer[i];
+                }
+            }
+        personneAcreer.push(new Personnage(personnage.img,personnage.nom,personnage.description,personnage.equipement,personnage.primordiaux))
         });
        
         let view = '';
