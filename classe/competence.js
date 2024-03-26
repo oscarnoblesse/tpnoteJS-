@@ -21,4 +21,9 @@ export default class Competence {
     get description() {
         return this._description;
     }
+
+    // Getter pour l'id
+    get id() {
+        return this._id;
+    }
 }

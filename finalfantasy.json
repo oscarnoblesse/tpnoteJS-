@@ -15,7 +15,7 @@
         "id": 2,
         "nom": "Jill Warrick",
         "description" : "Une jeune fille originaire des terres du Nord confiée à la cour de Rosalia en gage de paix entre les deux pays. L'archiduc l'a toujours traitée comme sa propre fille, aussi a-t-elle grandi aux côtés de Clive et Joshua. Âgée de douze ans au début de l'histoire, elle est l'amie et la confidente des deux frères, qui apprécient sa bonté et son affabilité.",
-        "armes": [6,9],
+        "equipement": [6,9],
         "competence" : [3,4],
         "primordiaux": "Shiva"
       },

@@ -1,9 +1,10 @@
 export default class Personnage {
-    constructor(img, nom, description, armes, primordiaux) {
+    constructor(img, nom, description, equipement, primordiaux) {
         this._img = img;
         this._nom = nom;
         this._description = description;
-        this._armes = armes;
+        this._equipement = equipement;
+        console.log(this._equipement);
         this._primordiaux = primordiaux;
     }
 
@@ -23,8 +24,8 @@ export default class Personnage {
     }
 
     // Getter pour les armes
-    get armes() {
-        return this._armes;
+    get equipement() {
+        return this._equipement;
     }
 
     // Getter pour les primordiaux
