@@ -1,6 +1,7 @@
 export default class Equipement {
     // Getter pour l'imageexport default class Personnage {
-    constructor(img, nom, description) {
+    constructor(id,img, nom, description) {
+        this._id = id;
         this._img = img;
         this._nom = nom;
         this._description = description;
@@ -20,5 +21,11 @@ export default class Equipement {
     get description() {
         return this._description;
     }
+
+    // Getter pour l'id
+    get id() {
+        return this._id;
+    }
+    
 }
 
