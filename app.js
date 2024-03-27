@@ -1,12 +1,13 @@
 
 import Accueil from './vue/Accueil.js';
+import Favoris from './vue/FavorisVue.js';
 import Utils from './Utils.js'
 
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
-    '/'                     : Accueil
-
+    '/'                     : Accueil,
+    '/favoris'              : Favoris
 };
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.

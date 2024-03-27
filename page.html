@@ -13,8 +13,7 @@
                 if(favoris.includes(id)){
                     console.log("Déliker le personnage avec l'id " + id);
                     let favorissplit = favoris.split(",");
-                    console.log(favorissplit);
-                    favorissplit = favorissplit.filter(e => e !== id); // Utilisation de la méthode filter pour exclure l'ID déliké
+                    favorissplit = favorissplit.filter(function(value, index, arr){ return value != id; }); // Filtrer la liste pour retirer l'ID
                     favoris = favorissplit.join(","); // Rejoindre la liste filtrée avec des virgules
                     localStorage.setItem('favoris', favoris); // Enregistrer la liste filtrée dans le localStorage
                 }
@@ -85,7 +84,11 @@
     <nav>
         <ul>
             <li>
-                <button onclick = changerPageVersInformationPersonnages()>Personnages</button>
+                <button onclick="window.location.href = '/page.html'">Personnages</button>
+            </li>
+            <li>
+                <button onclick="window.location.href = '#/favoris'">favoris</button>
+
             </li>
         </ul>
     </nav>
