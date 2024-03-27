@@ -59,10 +59,9 @@ export default class PersonnageFinal {
             const startIndex = (this.pageNumber - 1) * this.pageSize;
 
             const endIndex = startIndex + this.pageSize;
-
+            //coucou
             const paginatedPersonnages = personnagesAcreer.slice(startIndex, endIndex);
-          
-          
+            
             let view = '';
 
             // Parcourir chaque personnage
