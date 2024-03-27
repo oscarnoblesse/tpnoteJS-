@@ -1,11 +1,10 @@
-export default class Personnage {
-    constructor(id,img, nom, description, equipement, primordiaux) {
+export default class Competence {
+    // Getter pour l'imageexport default class Personnage {
+    constructor(id,img, nom, description) {
         this._id = id;
         this._img = img;
         this._nom = nom;
         this._description = description;
-        this._equipement = equipement;
-        this._primordiaux = primordiaux;
     }
 
     // Getter pour l'image
@@ -23,17 +22,8 @@ export default class Personnage {
         return this._description;
     }
 
-    // Getter pour les armes
-    get equipement() {
-        return this._equipement;
-    }
-
-    // Getter pour les primordiaux
-    get primordiaux() {
-        return this._primordiaux;
-    }
-
-    get id(){
+    // Getter pour l'id
+    get id() {
         return this._id;
     }
 }
