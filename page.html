@@ -3,6 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./app.js"></script>
+    <script>
+        function rechercher() {
+            const searchValue = document.getElementById("searchInput").value.trim().toLowerCase();
+        
+            const personnages = document.querySelectorAll(".personnage");
+        
+            personnages.forEach(personnage => {
+                const nomPersonnage = personnage.querySelector("h2").textContent.toLowerCase();
+                if (searchValue === "") {
+                    // Si la valeur de recherche est vide, afficher tous les personnages
+                    personnage.style.display = "block";
+                } else {
+                    if (nomPersonnage.includes(searchValue)) {
+                        personnage.style.display = "block";
+                    } else {
+                        personnage.style.display = "none";
+                    }
+                }
+            });
+        }        
+    </script>
+    <title>Final Fantasy - Personnages</title>
     <script type="module" src="./app.js">
     </script>
     <script>
@@ -57,7 +80,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        .personnage h2 {
+        .personnage h2 {    
             margin-top: 0;
         }
         .personnage ul {
@@ -81,7 +104,7 @@
     </style>
 </head>
 <header>
-    <h1>Informations des Personnages</h1>
+    <h1>Final Fantasy - Personnages</h1>
     <nav>
         <ul>
             <li>

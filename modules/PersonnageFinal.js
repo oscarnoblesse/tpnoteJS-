@@ -4,8 +4,17 @@ import Personnage from '../classe/personnage.js';
 import Utils from '../Utils.js';
 
 export default class PersonnageFinal {
-    async render () {
+
+    constructor(pageSize = 3) {
+
+              this.pageSize = pageSize;
+
+              this.pageNumber = 1;
+
+    }
+    async render () 
         try {
+              
             // Effectuer une requête HTTP vers l'API jsonserver pour récupérer les données
             const responseP = await fetch('http://localhost:3000/personnages');
             const personnages = await responseP.json();
@@ -45,10 +54,18 @@ export default class PersonnageFinal {
                 personnagesAcreer.push(new Personnage(personnage.id,personnage.img, personnage.nom, personnage.description, equipementP, personnage.primordiaux));
             });
 
+
+            const startIndex = (this.pageNumber - 1) * this.pageSize;
+
+            const endIndex = startIndex + this.pageSize;
+
+            const paginatedPersonnages = personneAcreer.slice(startIndex, endIndex);
+          
+          
             let view = '';
 
             // Parcourir chaque personnage
-            personnagesAcreer.forEach(personnage => {
+            paginatedPersonnages.forEach(personnage => {
                 // Construire le HTML pour chaque personnage
                 let equipementPersonnage = '';
 
@@ -69,6 +86,19 @@ export default class PersonnageFinal {
                     </div>
                 `;
             });
+          view += `
+  
+            <div class="pagination">
+
+              <button onclick="prevPage()">Previous</button>
+
+              <span>Page ${this.pageNumber} of ${Math.ceil(personneAcreer.length / this.pageSize)}</span>
+
+              <button onclick="nextPage()">Next</button>
+
+            </div>
+
+          `;
 
             return view;
         } catch (error) {
@@ -77,4 +107,3 @@ export default class PersonnageFinal {
         }
     }
 }
-
