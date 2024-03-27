@@ -31,21 +31,37 @@ export default class PersonnageFinal {
                 let competenceP = [];
 
                 for (let i = 0; i < equipementsAcreer.length; i++) {
-                    if (personnage.equipement.includes(equipementsAcreer[i].id)) {
-                        equipementP.push(equipementsAcreer[i]);  
+                    for(let j = 0; j < personnage.equipement.length; j++){
+                        if (equipementsAcreer[i].id == personnage.equipement[j]){
+                            equipementP.push(equipementsAcreer[i]);
+                        }
                     }
                 }
 
                 for (let i = 0; i < competencesAcreer.length; i++) {
-                    console.log(competencesAcreer)
-                    if (personnage.competence.includes(competencesAcreer[i].id)) {
-                        console.log("coucou")
-                        competenceP.push(competencesAcreer[i]);
+
+                    for(let j = 0; j < personnage.competence.length; j++){
+                        if (competencesAcreer[i].id == personnage.competence[j]){
+                            competenceP.push(competencesAcreer[i]);
+                        }
                     }
                 }
 
                 personnagesAcreer.push(new Personnage(personnage.id,personnage.img, personnage.nom, personnage.description, equipementP, personnage.primordiaux));
             });
+            // Convertir l'objet en chaîne JSON
+            var objetJSONP = JSON.stringify(personnagesAcreer);
+            var objetJSONE = JSON.stringify(equipementsAcreer);
+            var objetJSONC = JSON.stringify(competencesAcreer);
+            
+            sessionStorage.setItem("personnages", objetJSONP);
+            sessionStorage.setItem("equipement", objetJSONE);
+            sessionStorage.setItem("competence", objetJSONC);
+
+            var objetJSONP = sessionStorage.getItem("personnages");
+            var personnagesAcreernew = JSON.parse(objetJSONP);
+            console.log(personnagesAcreernew);
+
 
             let view = '';
 
