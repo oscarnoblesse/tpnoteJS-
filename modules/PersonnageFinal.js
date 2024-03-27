@@ -2,8 +2,11 @@ import Competence from '../classe/competence.js';
 import Equipement from '../classe/equipement.js';
 import Personnage from '../classe/personnage.js';
 import Utils from '../Utils.js';
-
 export default class PersonnageFinal {
+    constructor(pageSize = 3) {
+        this.pageSize = pageSize;
+        this.pageNumber = 1;
+    }
     async render () {
         try {
             // Effectuer une requête HTTP vers l'API jsonserver pour récupérer les données
@@ -62,11 +65,17 @@ export default class PersonnageFinal {
             var personnagesAcreernew = JSON.parse(objetJSONP);
             console.log(personnagesAcreernew);
 
+            const startIndex = (this.pageNumber - 1) * this.pageSize;
+
+            const endIndex = startIndex + this.pageSize;
+            //coucou
+            const paginatedPersonnages = personnagesAcreer.slice(startIndex, endIndex);
+            
 
             let view = '';
 
             // Parcourir chaque personnage
-            personnagesAcreer.forEach(personnage => {
+            paginatedPersonnages.forEach(personnage => {
                 // Construire le HTML pour chaque personnage
                 let equipementPersonnage = '';
                 for (let i = 0; i < personnage.equipement.length; i++) {
@@ -86,7 +95,17 @@ export default class PersonnageFinal {
                     </div>
                 `;
             });
+            view += `
+            <div class="pagination">
 
+              <button onclick="prevPage()">Previous</button>
+
+              <span>Page ${this.pageNumber} of ${Math.ceil(personnagesAcreer.length / this.pageSize)}</span>
+
+              <button onclick="nextPage()">Next</button>
+
+            </div>
+          `;
             return view;
         } catch (error) {
             console.error("Une erreur s'est produite lors du rendu des personnages :", error);
