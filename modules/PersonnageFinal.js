@@ -39,6 +39,7 @@ export default class PersonnageFinal {
                 }
 
                 for (let i = 0; i < competencesAcreer.length; i++) {
+
                     for(let j = 0; j < personnage.competence.length; j++){
                         if (competencesAcreer[i].id == personnage.competence[j]){
                             competenceP.push(competencesAcreer[i]);
@@ -68,7 +69,6 @@ export default class PersonnageFinal {
             personnagesAcreer.forEach(personnage => {
                 // Construire le HTML pour chaque personnage
                 let equipementPersonnage = '';
-
                 for (let i = 0; i < personnage.equipement.length; i++) {
                     equipementPersonnage += `<li>${personnage.equipement[i].nom} <img src="${personnage.equipement[i].image}" alt="image" ></li>`;
                 }
