@@ -40,15 +40,16 @@ export default class PersonnageFinal {
                 let competenceP = [];
 
                 for (let i = 0; i < equipementsAcreer.length; i++) {
-                    if (personnage.equipement.includes(equipementsAcreer[i].id)) {
-                        equipementP.push(equipementsAcreer[i]);  
-                    }
+                  console.log(personnage.equipement);
+                  if (personnage.equipement.includes(equipementsAcreer[i].id)) {
+                      equipementP.push(equipementsAcreer[i]);  
+                  }
                 }
 
                 for (let i = 0; i < competencesAcreer.length; i++) {
-                    if (personnage.competence.includes(competencesAcreer[i].id)) {
-                        competenceP.push(competencesAcreer[i]);
-                    }
+                  if (personnage.competence.includes(competencesAcreer[i].id)) {
+                      competenceP.push(competencesAcreer[i]);
+                  }
                 }
 
                 personnagesAcreer.push(new Personnage(personnage.id,personnage.img, personnage.nom, personnage.description, equipementP, personnage.primordiaux));
@@ -59,7 +60,7 @@ export default class PersonnageFinal {
 
             const endIndex = startIndex + this.pageSize;
 
-            const paginatedPersonnages = personneAcreer.slice(startIndex, endIndex);
+            const paginatedPersonnages = personnagesAcreer.slice(startIndex, endIndex);
           
           
             let view = '';
@@ -92,7 +93,7 @@ export default class PersonnageFinal {
 
               <button onclick="prevPage()">Previous</button>
 
-              <span>Page ${this.pageNumber} of ${Math.ceil(personneAcreer.length / this.pageSize)}</span>
+              <span>Page ${this.pageNumber} of ${Math.ceil(personnagesAcreer.length / this.pageSize)}</span>
 
               <button onclick="nextPage()">Next</button>
 
