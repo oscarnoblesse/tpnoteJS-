@@ -5,8 +5,8 @@
         "id": 1,
         "nom": "Clive Rosfield",
         "description" : "Notre héros est le fils aîné de l'archiduc de Rosalia. Tous s'attendaient à ce qu'il se révèle être l'Émissaire de Phénix, mais le destin voulut que ce soit son frère cadet, Joshua, qui hérite de cette responsabilité. Clive décida alors de se consacrer au maniement de l'épée. Âgé d'à peine quinze ans, il remporte le tournoi d'escrime de la cour, ce qui lui confère le titre de Gardien de Rosalia, chargé de protéger Joshua. D'autre part, il a reçu la bénédiction de Phénix, ce qui lui permet d'utiliser une partie des pouvoirs de feu de ce Primordial. Hélas, une tragédie va frapper Clive, lui faisant jurer de prendre sa revanche sur Ifrit, un Primordial ténébreux qui semble être à la source de tous ses malheurs.",
-        "equipement": [2],
-        "competence" : [1,2],
+        "equipement": ["2"],
+        "competence" : ["1","2"],
         "primordiaux": "Ifrit"
         
       },
@@ -15,8 +15,8 @@
         "id": 2,
         "nom": "Jill Warrick",
         "description" : "Une jeune fille originaire des terres du Nord confiée à la cour de Rosalia en gage de paix entre les deux pays. L'archiduc l'a toujours traitée comme sa propre fille, aussi a-t-elle grandi aux côtés de Clive et Joshua. Âgée de douze ans au début de l'histoire, elle est l'amie et la confidente des deux frères, qui apprécient sa bonté et son affabilité.",
-        "equipement": [6,9],
-        "competence" : [3,4],
+        "equipement": ["6","9"],
+        "competence" : ["3","4"],
         "primordiaux": "Shiva"
       },
       {
@@ -24,80 +24,80 @@
         "id": 3,
         "nom": "Joshua Rosfield",
         "description" : "Second fils de l'archiduc de Rosalia et Émissaire de Phénix, Joshua a cinq ans de moins que Clive. Il ne fait pas grand cas de sa noblesse et traite tous les sujets de l'archiduché avec respect et bienveillance. Timide et studieux, c'est un gentil petit garçon qui aime les livres autant qu'il déteste les carottes. Il admire Clive et trouve que son grand frère, bien plus intrépide, aurait fait un meilleur Émissaire de Phénix. Mais à seulement dix ans, Joshua sera lui aussi victime d'un destin tragique.",
-        "equipement": [3],
-        "competence" : [5,6],
+        "equipement": ["3"],
+        "competence" : ["5","6"],
         "primordiaux": "Ramuh"
       },
       {
         "img" : "./image/imagePersonnage/joshua_rosfield.png",
-        "id": 3,
+        "id": 4,
         "nom": "Joshua Rosfield",
         "description" : "Second fils de l'archiduc de Rosalia et Émissaire de Phénix, Joshua a cinq ans de moins que Clive. Il ne fait pas grand cas de sa noblesse et traite tous les sujets de l'archiduché avec respect et bienveillance. Timide et studieux, c'est un gentil petit garçon qui aime les livres autant qu'il déteste les carottes. Il admire Clive et trouve que son grand frère, bien plus intrépide, aurait fait un meilleur Émissaire de Phénix. Mais à seulement dix ans, Joshua sera lui aussi victime d'un destin tragique.",
-        "equipement": [3],
-        "competence" : [5,6],
+        "equipement": ["3"],
+        "competence" : ["5","6"],
         "primordiaux": "Ramuh"
       },
       {
         "img" : "./image/imagePersonnage/joshua_rosfield.png",
-        "id": 3,
+        "id": 5,
         "nom": "Coucou Rosfield",
         "description" : "Second fils de l'archiduc de Rosalia et Émissaire de Phénix, Joshua a cinq ans de moins que Clive. Il ne fait pas grand cas de sa noblesse et traite tous les sujets de l'archiduché avec respect et bienveillance. Timide et studieux, c'est un gentil petit garçon qui aime les livres autant qu'il déteste les carottes. Il admire Clive et trouve que son grand frère, bien plus intrépide, aurait fait un meilleur Émissaire de Phénix. Mais à seulement dix ans, Joshua sera lui aussi victime d'un destin tragique.",
-        "equipement": [3],
-        "competence" : [5,6],
+        "equipement": ["3"],
+        "competence" : ["5","6"],
         "primordiaux": "Ramuh"
       },
       {
         "img" : "./image/imagePersonnage/joshua_rosfield.png",
-        "id": 3,
+        "id": 6,
         "nom": "Coucou Rosfield",
         "description" : "Second fils de l'archiduc de Rosalia et Émissaire de Phénix, Joshua a cinq ans de moins que Clive. Il ne fait pas grand cas de sa noblesse et traite tous les sujets de l'archiduché avec respect et bienveillance. Timide et studieux, c'est un gentil petit garçon qui aime les livres autant qu'il déteste les carottes. Il admire Clive et trouve que son grand frère, bien plus intrépide, aurait fait un meilleur Émissaire de Phénix. Mais à seulement dix ans, Joshua sera lui aussi victime d'un destin tragique.",
-        "equipement": [3],
-        "competence" : [5,6],
+        "equipement": ["3"],
+        "competence" : ["5","6"],
         "primordiaux": "Ramuh"
       },
       {
         "img" : "./image/imagePersonnage/joshua_rosfield.png",
-        "id": 3,
+        "id": 7,
         "nom": "Coucou Rosfield",
         "description" : "Second fils de l'archiduc de Rosalia et Émissaire de Phénix, Joshua a cinq ans de moins que Clive. Il ne fait pas grand cas de sa noblesse et traite tous les sujets de l'archiduché avec respect et bienveillance. Timide et studieux, c'est un gentil petit garçon qui aime les livres autant qu'il déteste les carottes. Il admire Clive et trouve que son grand frère, bien plus intrépide, aurait fait un meilleur Émissaire de Phénix. Mais à seulement dix ans, Joshua sera lui aussi victime d'un destin tragique.",
-        "equipement": [3],
-        "competence" : [5,6],
+        "equipement": ["3"],
+        "competence" : ["5","6"],
         "primordiaux": "Ramuh"
       },
       {
         "img" : "./image/imagePersonnage/joshua_rosfield.png",
-        "id": 3,
+        "id": 8,
         "nom": "Coucou Rosfield",
         "description" : "Second fils de l'archiduc de Rosalia et Émissaire de Phénix, Joshua a cinq ans de moins que Clive. Il ne fait pas grand cas de sa noblesse et traite tous les sujets de l'archiduché avec respect et bienveillance. Timide et studieux, c'est un gentil petit garçon qui aime les livres autant qu'il déteste les carottes. Il admire Clive et trouve que son grand frère, bien plus intrépide, aurait fait un meilleur Émissaire de Phénix. Mais à seulement dix ans, Joshua sera lui aussi victime d'un destin tragique.",
-        "equipement": [3],
-        "competence" : [5,6],
+        "equipement": ["3"],
+        "competence" : ["5","6"],
         "primordiaux": "Ramuh"
       },
       {
         "img" : "./image/imagePersonnage/joshua_rosfield.png",
-        "id": 3,
+        "id": 9,
         "nom": "Coucou Rosfield",
         "description" : "Second fils de l'archiduc de Rosalia et Émissaire de Phénix, Joshua a cinq ans de moins que Clive. Il ne fait pas grand cas de sa noblesse et traite tous les sujets de l'archiduché avec respect et bienveillance. Timide et studieux, c'est un gentil petit garçon qui aime les livres autant qu'il déteste les carottes. Il admire Clive et trouve que son grand frère, bien plus intrépide, aurait fait un meilleur Émissaire de Phénix. Mais à seulement dix ans, Joshua sera lui aussi victime d'un destin tragique.",
-        "equipement": [3],
-        "competence" : [5,6],
+        "equipement": ["3"],
+        "competence" : ["5","6"],
         "primordiaux": "Ramuh"
       },
       {
         "img" : "./image/imagePersonnage/joshua_rosfield.png",
-        "id": 3,
+        "id": 9,
         "nom": "Coucou Rosfield",
         "description" : "Second fils de l'archiduc de Rosalia et Émissaire de Phénix, Joshua a cinq ans de moins que Clive. Il ne fait pas grand cas de sa noblesse et traite tous les sujets de l'archiduché avec respect et bienveillance. Timide et studieux, c'est un gentil petit garçon qui aime les livres autant qu'il déteste les carottes. Il admire Clive et trouve que son grand frère, bien plus intrépide, aurait fait un meilleur Émissaire de Phénix. Mais à seulement dix ans, Joshua sera lui aussi victime d'un destin tragique.",
-        "equipement": [3],
-        "competence" : [5,6],
+        "equipement": ["3"],
+        "competence" : ["5","6"],
         "primordiaux": "Ramuh"
       },
       {
         "img" : "./image/imagePersonnage/joshua_rosfield.png",
-        "id": 3,
+        "id": 10,
         "nom": "Coucou Rosfield",
         "description" : "Second fils de l'archiduc de Rosalia et Émissaire de Phénix, Joshua a cinq ans de moins que Clive. Il ne fait pas grand cas de sa noblesse et traite tous les sujets de l'archiduché avec respect et bienveillance. Timide et studieux, c'est un gentil petit garçon qui aime les livres autant qu'il déteste les carottes. Il admire Clive et trouve que son grand frère, bien plus intrépide, aurait fait un meilleur Émissaire de Phénix. Mais à seulement dix ans, Joshua sera lui aussi victime d'un destin tragique.",
-        "equipement": [3],
-        "competence" : [5,6],
+        "equipement": ["3"],
+        "competence" : ["5","6"],
         "primordiaux": "Ramuh"
       }
     ],

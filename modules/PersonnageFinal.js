@@ -4,17 +4,8 @@ import Personnage from '../classe/personnage.js';
 import Utils from '../Utils.js';
 
 export default class PersonnageFinal {
-
-    constructor(pageSize = 3) {
-
-              this.pageSize = pageSize;
-
-              this.pageNumber = 1;
-
-    }
-    async render (){
+    async render () {
         try {
-              
             // Effectuer une requête HTTP vers l'API jsonserver pour récupérer les données
             const responseP = await fetch('http://localhost:3000/personnages');
             const personnages = await responseP.json();
@@ -40,36 +31,28 @@ export default class PersonnageFinal {
                 let competenceP = [];
 
                 for (let i = 0; i < equipementsAcreer.length; i++) {
-                  console.log(personnage.equipement);
-                  if (personnage.equipement.includes(equipementsAcreer[i].id)) {
-                      equipementP.push(equipementsAcreer[i]);  
-                  }
+                    if (personnage.equipement.includes(equipementsAcreer[i].id)) {
+                        equipementP.push(equipementsAcreer[i]);  
+                    }
                 }
 
                 for (let i = 0; i < competencesAcreer.length; i++) {
-                  if (personnage.competence.includes(competencesAcreer[i].id)) {
-                      competenceP.push(competencesAcreer[i]);
-                  }
+                    console.log(competencesAcreer)
+                    if (personnage.competence.includes(competencesAcreer[i].id)) {
+                        console.log("coucou")
+                        competenceP.push(competencesAcreer[i]);
+                    }
                 }
 
                 personnagesAcreer.push(new Personnage(personnage.id,personnage.img, personnage.nom, personnage.description, equipementP, personnage.primordiaux));
             });
 
-
-            const startIndex = (this.pageNumber - 1) * this.pageSize;
-
-            const endIndex = startIndex + this.pageSize;
-
-            const paginatedPersonnages = personnagesAcreer.slice(startIndex, endIndex);
-          
-          
             let view = '';
 
             // Parcourir chaque personnage
-            paginatedPersonnages.forEach(personnage => {
+            personnagesAcreer.forEach(personnage => {
                 // Construire le HTML pour chaque personnage
                 let equipementPersonnage = '';
-
                 for (let i = 0; i < personnage.equipement.length; i++) {
                     equipementPersonnage += `<li>${personnage.equipement[i].nom} <img src="${personnage.equipement[i].image}" alt="image" ></li>`;
                 }
@@ -87,20 +70,7 @@ export default class PersonnageFinal {
                     </div>
                 `;
             });
-          view += `
-  
-            <div class="pagination">
 
-              <button onclick="prevPage()">Previous</button>
-
-              <span>Page ${this.pageNumber} of ${Math.ceil(personnagesAcreer.length / this.pageSize)}</span>
-
-              <button onclick="nextPage()">Next</button>
-
-            </div>
-
-          `;
-        
             return view;
         } catch (error) {
             console.error("Une erreur s'est produite lors du rendu des personnages :", error);
@@ -108,3 +78,4 @@ export default class PersonnageFinal {
         }
     }
 }
+
