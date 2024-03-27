@@ -12,7 +12,7 @@ export default class PersonnageFinal {
               this.pageNumber = 1;
 
     }
-    async render () 
+    async render (){
         try {
               
             // Effectuer une requête HTTP vers l'API jsonserver pour récupérer les données
@@ -99,7 +99,7 @@ export default class PersonnageFinal {
             </div>
 
           `;
-
+        
             return view;
         } catch (error) {
             console.error("Une erreur s'est produite lors du rendu des personnages :", error);
